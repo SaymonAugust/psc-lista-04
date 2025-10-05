@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class SomaEMedia {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double numero;    // variável para guardar cada número digitado
+        double soma = 0;  // acumulador que começa em 0
+        double media;     // variável que guardará o resultado da média
+
+        System.out.println("=== SOMA E MÉDIA DE 5 NÚMEROS ===");
+
+        // loop para ler 5 números
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            numero = sc.nextDouble();  // lê o número digitado
+            soma += numero;            // adiciona o número à soma total
+        }
+
+        // calcula a média
+        media = soma / 5;
+
+        System.out.println("\nA soma dos números é: " + soma);
+        System.out.println("A média dos números é: " + media);
+
+        sc.close();
+    }
+}
