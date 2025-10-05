@@ -1,0 +1,23 @@
+// Parte 01
+public class NumerosDeUmAteVinte {
+    public static void main(String[] args) {
+        System.out.println("Números de 1 a 20 (um abaixo do outro):");
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.println(i); // quebra de linha automática
+        }
+    }
+}
+
+// Parte 02
+public class NumerosDeUmAteVinte {
+    public static void main(String[] args) {
+        System.out.println("Números de 1 a 20 (um ao lado do outro):");
+
+        for (int i = 1; i <= 20; i++) {
+            System.out.print(i + " "); // não pula linha, apenas adiciona espaço
+        }
+
+        System.out.println(); // quebra de linha final (apenas pra deixar bonito)
+    }
+}
