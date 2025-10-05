@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ValidarNota {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double nota; // usamos double pois notas podem ter casas decimais
+
+        System.out.print("Digite uma nota entre 0 e 10: ");
+        nota = entrada.nextDouble();
+
+        // Enquanto a nota for menor que 0 OU maior que 10, o programa repete
+        while (nota < 0 || nota > 10) {
+            System.out.println("Valor inválido! A nota deve estar entre 0 e 10.");
+            System.out.print("Digite novamente: ");
+            nota = entrada.nextDouble();
+        }
+
+        System.out.println("Nota válida! A nota digitada foi: " + nota);
+
+        entrada.close();
+    }
+}
