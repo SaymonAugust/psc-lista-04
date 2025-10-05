@@ -1,0 +1,64 @@
+//Raciocínio
+
+//Enquanto a população de A for menor que a de B:
+
+//Aumentamos a população de A em 3%.
+
+//Aumentamos a população de B em 1.5%.
+
+//Contamos mais 1 ano.
+
+//Quando o loop terminar, significa que A já ultrapassou ou igualou B.
+//Então mostramos quantos anos se passaram.
+
+// JAVA
+
+import java.util.Scanner;
+
+public class CrescimentoPopulacional {
+    public static void main(String[] args) {
+
+        // Declaração das variáveis
+        double populacaoA = 80000;
+        double populacaoB = 200000;
+        double taxaA = 0.03;
+        double taxaB = 0.015;
+        int anos = 0;
+
+        // Loop para calcular até que A ultrapasse ou iguale B
+        while (populacaoA < populacaoB) {
+            populacaoA += populacaoA * taxaA; // A cresce 3%
+            populacaoB += populacaoB * taxaB; // B cresce 1.5%
+            anos++; // conta mais um ano
+        }
+
+        // Exibe o resultado
+        System.out.println("Serão necessários " + anos + " anos para que o país A ultrapasse ou iguale o país B.");
+        System.out.printf("População final de A: %.0f habitantes\n", populacaoA);
+        System.out.printf("População final de B: %.0f habitantes\n", populacaoB);
+    }
+}
+
+
+// PORTUGOL
+
+programa {
+  funcao inicio() {
+    real populacaoA = 80000
+    real populacaoB = 200000
+    real taxaA = 0.03
+    real taxaB = 0.015
+    inteiro anos = 0
+
+    enquanto (populacaoA < populacaoB) {
+      populacaoA = populacaoA + (populacaoA * taxaA)
+      populacaoB = populacaoB + (populacaoB * taxaB)
+      anos = anos + 1
+    }
+
+    escreva("Serão necessários ", anos, " anos para que a população do país A ultrapasse ou iguale a do país B.\n")
+    escreva("População A: ", populacaoA, "\n")
+    escreva("População B: ", populacaoB, "\n")
+  }
+}
+
