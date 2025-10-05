@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class LoginValido {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        String usuario;
+        String senha;
+
+        // Lê o nome de usuário
+        System.out.print("Digite o nome de usuário: ");
+        usuario = entrada.nextLine();
+
+        // Lê a senha
+        System.out.print("Digite a senha: ");
+        senha = entrada.nextLine();
+
+        // Enquanto o nome do usuário for igual à senha, repete o processo
+        while (senha.equals(usuario)) {
+            System.out.println("Erro: a senha não pode ser igual ao nome de usuário!");
+            System.out.print("Digite o nome de usuário novamente: ");
+            usuario = entrada.nextLine();
+            System.out.print("Digite a senha novamente: ");
+            senha = entrada.nextLine();
+        }
+
+        System.out.println("Cadastro realizado com sucesso!");
+        System.out.println("Usuário: " + usuario);
+        System.out.println("Senha: " + senha);
+
+        entrada.close();
+    }
+}
